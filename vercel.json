@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "Pipe-Detection-API-MODEL/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Pipe-Detection-API-MODEL/wsgi.py"
+    }
+  ]
+}
