@@ -1,30 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "pipedetection/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.12"
-      }
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "poll/wsgi.py"
-    }
-  ]
+  "builds": [{
+    "src": "vercel_startup.sh",
+    "use": "@vercel/python",
+    "config": { "maxLambdaSize": "50mb" }
+  }],
+  "routes": [{
+    "src": "/static/(.*)",
+    "headers": { "cache-control": "s-maxage=31536000, immutable" },
+    "dest": "/static/$1"
+  }, {
+    "src": "/api/(.*)",
+    "dest": "vercel_startup.sh"
+  }]
 }
