@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$kk(8x=mw&69r$9$$bwazv^9v5&#u)tsfon$#)bbxgsrhp(se=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True  # Ensure this is set appropriately based on your environment.
