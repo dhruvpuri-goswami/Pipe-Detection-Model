@@ -12,7 +12,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Pipe-Detection-Model/wsgi.py"
+      "dest": "pipedetection/wsgi.py"
     }
   ]
 }
