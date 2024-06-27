@@ -1,18 +1,5 @@
 {
-  "builds": [
-    {
-      "src": "Pipe-Detection-Model/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.12"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "Pipe-Detection-Model/wsgi.py"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
