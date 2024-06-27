@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app']
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True  # Ensure this is set appropriately based on your environment.
 
 # Application definition
 
