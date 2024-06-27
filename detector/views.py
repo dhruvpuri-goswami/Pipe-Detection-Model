@@ -25,3 +25,6 @@ def detect_pipes(request):
         else:
             return JsonResponse({'error': 'Invalid form'}, status=400)
     return JsonResponse({'error': 'Invalid request'}, status=400)
+
+def hello(request):
+    return "Hello World"
