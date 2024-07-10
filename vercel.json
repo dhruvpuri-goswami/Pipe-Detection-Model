@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "manage.py"
     }
-  ]
+  ],
+  "env": {
+    "PIPENV_VENV_IN_PROJECT": "true"
+  }
 }
